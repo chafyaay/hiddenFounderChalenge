@@ -1,0 +1,565 @@
+@mixin responsive($width) {
+    @if $width==xlarge {
+        @media (min-width: 1441px) {
+            @content;
+        }
+    }
+    @if $width==normal {
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            @content;
+        }
+    }
+    @if $width==laptop {
+        @media (min-width: 900px)and (max-width:1024px) {
+            @content;
+        }
+    }
+    @if $width==tablet {
+        @media (min-width: 480px)and (max-width:899px) {
+            @content;
+        }
+    }
+    @if $width==mobile {
+        @media (min-width: 200px)and (max-width:479px) {
+            @content;
+        }
+    }
+}
+
+@mixin box-sizing-fun($box) {
+    -webkit-box-sizing: $box;
+    -moz-box-sizing: $box;
+    box-sizing: $box;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.main {
+    margin: 0 auto;
+}
+
+.footer {
+    width: 100%;
+    height: 150px;
+    margin: 20px auto 0 auto;
+    padding: 60px 143px;
+    background: #273042;
+    @include box-sizing-fun(border-box);
+}
+
+.main {
+    .header {
+        width: 100%;
+        height: 443px;
+    }
+    .main_content {
+        clear: both;
+        width: 100%;
+        position: relative;
+    }
+}
+
+@mixin imgFilter($larg, $max-large, $long) {
+    .img-filter {
+        max-width: $max-large;
+        width: $larg;
+        height: $long;
+    }
+}
+
+@include responsive(xlarge) {
+    .main {
+        width: 1440px;
+        .main_content {
+            padding: 20px;
+        }
+        .cards {
+            width: 60%;
+            float: left;
+            .card {
+                width: 32.33%;
+                min-width: 260px;
+                display: inline-block;
+                .item {
+                    @include imgFilter(100%, 300px, 100%);
+                }
+            }
+        }
+        .map {
+            float: left;
+            width: 40%;
+            height: 752px;
+            position: relative;
+        }
+   
+    .m_slider {
+        height: 443px;
+        padding: 20px;
+        .logo {
+            width: auto;
+        }
+        .toggleBtn {
+            display: none;
+        }
+        .description {
+            margin: 60px 0 70px 0;
+        }
+        .browse {
+            padding-top: 10px;
+            width: 173px;
+            position: relative;
+            padding-left: 136px;
+             }
+        }
+        .headings {
+            padding: 20px 0 25px 35px;
+        }
+        .settings {
+            vertical-align: middle;
+            line-height: 0;
+            position: absolute;
+            right: 20px;
+            bottom: 158px;
+            display: flex;
+            .followUs {
+                margin-right: 15px;
+            }
+        }
+        .bottom-bar {
+            width: 100%;
+        }
+    }
+
+}
+
+
+@include responsive(normal) {
+    .main {
+        width: 100%;
+
+       .main_content {
+            padding: 20px;
+        }
+        .cards {
+            float: left;
+            width: 60%;
+            .card {
+                width: 32.33%;
+                display: inline-block;
+                .item {
+                    @include imgFilter(100%, 100%, 100%);
+                }
+            }
+        }
+        .map {
+            float: left;
+            width: 40%;
+            height:645px;
+        }
+    
+    .m_slider {
+        height: 443px;
+        padding: 20px;
+        .logo {
+            width: auto;
+        }
+        .toggleBtn {
+            display: none;
+        }
+        .description {
+            margin: 60px 0 70px 0;
+        }
+        .browse {
+            padding-top: 10px;
+            width: 173px;
+            position: relative;
+            padding-left: 136px;
+        }
+        .headings {
+            padding: 20px 0 25px 35px;
+        }
+        .settings {
+            vertical-align: middle;
+            line-height: 0;
+            position: absolute;
+            right: 20px;
+            bottom: 158px;
+            display: flex;
+            .followUs {
+                margin-right: 15px;
+            }
+        }
+        .bottom-bar {
+            width: 100%;
+        }
+    }
+}
+}
+
+@include responsive(laptop) {
+    .main {
+        width: 100%;
+        .main_content {
+            padding: 20px;
+        }
+        .cards {
+            width: 100%;
+            float: left;
+            .card {
+                width: 33.33%;
+                float: left;
+                padding: 0 10px;
+                .item {
+                    @include imgFilter(100%, 100%, 100%);
+                }
+            }
+        }
+        .map {
+            width: 100%;
+            height: 350px;
+            float: inherit;
+        }
+    
+
+
+
+    .m_slider {
+        height: 443px;
+        padding: 20px;
+        .logo {
+            width: auto;
+        }
+        .toggleBtn {
+            display: none;
+        }
+        .description {
+            margin: 60px 0 70px 0;
+        }
+        .browse {
+            padding-top: 10px;
+            width: 173px;
+            position: relative;
+            padding-left: 136px;
+        }
+        .headings {
+            padding: 20px 0 25px 35px;
+        }
+        .settings {
+            vertical-align: middle;
+            line-height: 0;
+            position: absolute;
+            right: 20px;
+            bottom: 158px;
+            display: flex;
+            .followUs {
+                margin-right: 15px;
+            }
+        }
+        .bottom-bar {
+            width: 100%;
+        }
+    }
+
+    
+}
+}
+
+@include responsive(tablet) {
+    .main {
+        width: 100%;
+        .main_content {
+            padding: 20px;
+        }
+        .cards {
+            padding: 20px;
+            width: 100%;
+            clear: both;
+            .card {
+                width: 32.33%;
+                display: inline-block;
+                .item {
+                    @include imgFilter(100%, 100%, 100%);
+                }
+            }
+        }
+        .map {
+            width: 100%;
+            height: 350px;
+            clear: both;
+        }
+    }
+    .profile {
+        padding: 20Px;
+        @include box-sizing-fun(border-box);
+        h4 {
+            text-transform: capitalize;
+            color: #ffffff;
+        }
+        a {
+            margin-bottom: 20px;
+            border-bottom: 1px solid;
+            padding: 20px 0 !important;
+            width: 50%;
+            float: left;
+            text-align: center;
+        }
+    }
+    .off_sidenav {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(39, 48, 66, 0.74);
+        overflow-x: hidden;
+        transition-delay: 0.5s;
+        padding-top: 10px;
+        display: none;
+        cursor: pointer
+    }
+    .sidenav {
+        ul.user {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            li {
+                background: #273042;
+                padding: 0 20px;
+            }
+        }
+    }
+    .m_slider {
+        height: 600px;
+        .logo {
+            padding-left: 40px;
+            width: auto;
+        }
+        .toggleBtn {
+            line-height: 1;
+            display: block;
+            left: 6px;
+            position: absolute;
+            font-size: 1.23em;
+        }
+        .user {
+            display: none;
+        }
+    }
+    .browse {
+        width: 50%;
+        top: 13px;
+        right: 0;
+        position: absolute;
+    }
+    .description {
+        text-align: center;
+        margin: 20px 0 0 0;
+        .picture {
+            width: 100%;
+            float: inherit;
+        }
+    }
+    .headings {
+        width: 100%;
+        padding: 0;
+        h1 {
+            line-height: 1;
+            font-size: 35px;
+            margin-top: 18px;
+        }
+    }
+    .settings {
+        text-align: center;
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        margin-top: 20px;
+        .followUs {
+            margin-right: 0;
+        }
+        .config {
+            display: none;
+        }
+    }
+    .bottom-bar {
+        width: 100%;
+        margin: 0 !important;
+        padding: 10px 0 !important;
+        .filter {
+            padding-left: 20px;
+            display: block;
+        }
+        .main-menu {
+            display: none;
+        }
+    }
+}
+
+@include responsive(mobile) {
+    .main {
+        width: 100%;
+
+        .main_content {
+            padding: 20px;
+        }
+        .cards {
+            padding: 20px;
+            width: 100%;
+            clear: both;
+            .card {
+                width: 100%;
+                .item {
+                    @include imgFilter(100%, 100%, 100%);
+                }
+            }
+        }
+        .map {
+            width: 100%;
+            height: 450px;
+            clear: both;
+
+            #pac-input {
+                width: 250px;
+              }
+
+        }
+    }
+    .profile {
+        padding: 20Px;
+        @include box-sizing-fun(border-box);
+        h4 {
+            text-transform: capitalize;
+            color: #ffffff;
+        }
+        a {
+            margin-bottom: 20px;
+            border-bottom: 1px solid;
+            padding: 20px 0 !important;
+            width: 50%;
+            float: left;
+            text-align: center;
+        }
+    }
+    .off_sidenav {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(39, 48, 66, 0.74);
+        overflow-x: hidden;
+        transition-delay: 0.5s;
+        padding-top: 10px;
+        display: none;
+        cursor: pointer
+    }
+    .sidenav {
+        ul.user {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            li {
+                background: #273042;
+                padding: 0 20px;
+            }
+        }
+    }
+    .m_slider {
+        height: 600px;
+        .logo {
+            padding-left: 40px;
+            width: auto;
+        }
+        .toggleBtn {
+            line-height: 1;
+            display: block;
+            left: 6px;
+            position: absolute;
+            font-size: 1.23em;
+        }
+        .user {
+            display: none;
+        }
+    }
+    .browse {
+        width: 150px;
+        top: 13px;
+        right: 0;
+        position: absolute;
+
+        
+    }
+
+    
+
+
+    .description {
+        text-align: center;
+        margin: 20px 0 0 0;
+        .picture {
+            width: 100%;
+            float: inherit;
+        }
+    }
+    .headings {
+        width: 100%;
+        padding: 0;
+        h1 {
+            line-height: 1;
+            font-size: 35px;
+            margin-top: 18px;
+        }
+    }
+    .settings {
+        text-align: center;
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        margin-top: 20px;
+        .followUs {
+            margin-right: 0;
+        }
+        .config {
+            display: none;
+        }
+    }
+    .bottom-bar {
+        width: 100%;
+        margin: 0 !important;
+        padding: 10px 0 !important;
+        .filter {
+            padding-left: 20px;
+            display: block;
+        }
+        .main-menu {
+            display: none;
+        }
+
+        
+    }
+
+    .footer{
+            padding: 60px !important;
+        }
+
+
+}

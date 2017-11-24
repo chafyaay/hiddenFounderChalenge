@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--  Made By chafyaay yassine for Hideen founders Test   - No Copyright -->
+<title>IDEADATE RESTAURANT</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- avenir style  -->
+<link rel="stylesheet" href="./assets/css/style.css">
+
+<!-- avenir font  -->
+<link rel="stylesheet" href="./assets/css/fonts/avenir/avenir.css">
+
+<!-- Pe-icon-7-stroke  -->
+<link rel="stylesheet" href="http://themes-pixeden.com/font-demos/7-stroke/Pe-icon-7-stroke.css">
+
+<!-- map api  -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!-- owl carousel style -->
+<link rel="stylesheet" type="text/css" href="./assets/owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="./assets/owlcarousel/owl.theme.default.min.css">
+
+<!-- jquery  -->
+<script src="./assets/owlcarousel/jquery.min.js"></script>
+<!-- owl carousel  -->
+<script src="./assets/owlcarousel/owl.carousel.js"></script>
+</head>
+
+<body>
+<!-- main satart -->
+<div class="main" id="main"> 
+  <!-- side nav actived on mibile and tablet  -->
+  <div id="mySidenav" class="sidenav"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="user">
+      <div class="profile"> <img class="picture" src="./assets/images/profile.png">
+        <h4>@John smith</h4>
+        <a href="#"> <img src="assets/images/notif.png"> </a> <a href="#"> <img src="assets/images/fav.png"> </a> </div>
+    </div>
+    <a class="active" href="#">affordable</a> <a href="#">fancy</a> <a href="#">tips</a> <a href="#">communoty</a> <a href="#">log out</a> </div>
+  <div id="off_sidenav" class="off_sidenav" onclick="closeNav()"> </div>
+  
+  <!-- slider start -->
+  <div class="m_slider">
+    <div class="header test">
+      <div class="col-left logo test"> <span class="toggleBtn" onclick="openNav()">&#9776;</span> DATE <span>IDEA</span> </div>
+      <div class="col-left browse test">
+        <select id="standard-dropdown" name="standard-dropdown" class="custom-class1 custom-class2">
+          <option value="1" class="test-class-1" selected="selected">Browse</option>
+          <option value="6">browse</option>
+          <option value="7">browse</option>
+        </select>
+      </div>
+      <!-- user -->
+      <ul class="col-right user test ">
+        <li> <a class="notification" href="#"> <img src="assets/images/notif.png"> </a> </li>
+        <li> <a class="favorite" href="#"> <img src="assets/images/fav.png"> </a> </li>
+        <li class="img-profile"> <a href="#" onclick="showSubmenu()"> <img src="./assets/images/profile.png"> <span> </span> </a>
+          <ul id="user-submenu">
+            <li><strong>Natali JEAN</strong></li>
+            <li><a href="#">Log out</a></li>
+          </ul>
+          <script>
+
+// drop doawn menu for user 
+   var btnState=false;
+      
+    function showSubmenu(){
+
+       
+       var submenu=document.getElementById("user-submenu");
+       if(btnState==false){
+          submenu.style.display="block";
+          
+       }else {submenu.style.display="none";}
+       
+       btnState=!btnState;
+
+       console.log(btnState)
+      }
+
+   
+    
+  
+</script> 
+        </li>
+      </ul>
+    </div>
+    
+    <!-- description -->
+    
+    <div class="col-left description test">
+      <div class="col-left picture"> <img src="assets/images/Picture.png"> </div>
+      <div class="col-left headings">
+        <h1>Date Night Restaurants</h1>
+        <h3>Best places for a date night in New York City </h3>
+        <span>6 M FOLLOWERS</span> </div>
+    </div>
+    <!-- desicription end --> 
+    <!-- bottom bar  -->
+    <nav class="bottom-bar test">
+      <div class="col-left filter test">
+        <select id="standard-dropdown" name="standard-dropdown" class="custom-class1 custom-class2">
+          <option value="1" class="test-class-1" selected="selected">POPULAR</option>
+          <option value="6">NEWS</option>
+          <option value="7">EDITORS CHOISE</option>
+        </select>
+      </div>
+      <div class="col-left main-menu test">
+        <ul>
+          <li class="active"> <a href="#">affordable</a> </li>
+          <li class=""> <a href="#">fancy</a> </li>
+          <li class=""> <a href="#">tips</a> </li>
+          <li class=""> <a href="#">communoty</a> </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- bottom bar end -->
+    <div class="col-right settings test">
+      <button class="followUs"> Follow</button>
+      <a href="#" class="config"> <img src="assets/images/Settings.png"> </a> </div>
+  </div>
+  <!-- slider end  -->
+  
+  <div class="main_content"> 
+    
+    <!-- cards side -->
+    <div class="cards">
+      <div class="card fadeOut owl-carousel owl-theme">
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat1.png"></div>
+          <div class="item_desc">
+            <h4>Asiat<span class="plat_rate"> <i class="pe-7s-star"></i><span> 4.7</span></span></h4>
+            <span class="likes">400k Likes</span> </div>
+        </div>
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat2.png"></div>
+          <div class="item_desc">
+            <h4>Blue Hill<span class="plat_rate"> <i class="pe-7s-star"></i><span> 5.7</span></span></h4>
+            <span class="likes">900k Likes</span> </div>
+        </div>
+      </div>
+      <div class="card fadeOut owl-carousel owl-theme">
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat2.png"></div>
+          <div class="item_desc">
+            <h4>Asiat<span class="plat_rate"> <i class="pe-7s-star"></i><span> 4.7</span></span></h4>
+            <span class="likes">400k Likes</span> </div>
+        </div>
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat3.png"></div>
+          <div class="item_desc">
+            <h4>Jean-Georges <span class="plat_rate"> <i class="pe-7s-star"></i><span> 4.7</span></span></h4>
+            <span class="likes">400k Likes</span> </div>
+        </div>
+      </div>
+      <div class="card fadeOut owl-carousel owl-theme">
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat3.png"></div>
+          <div class="item_desc">
+            <h4>Jean-Georges <span class="plat_rate"> <i class="pe-7s-star"></i><span> 4.7</span></span></h4>
+            <span class="likes">400k Likes</span> </div>
+        </div>
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat4.png"></div>
+          <div class="item_desc">
+            <h4>Petrossian<span class="plat_rate"> <i class="pe-7s-star"></i><span> 4.7</span></span></h4>
+            <span class="likes">670k Likes</span> </div>
+        </div>
+      </div>
+      <div class="     card fadeOut owl-carousel owl-theme">
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat4.png"></div>
+          <div class="item_desc">
+            <h4>Petrossian<span class="plat_rate"> <i class="pe-7s-star"></i><span> 4.7</span></span></h4>
+            <span class="likes">670k Likes</span> </div>
+        </div>
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat5.png"></div>
+          <div class="item_desc">
+            <h4>ABC Kitchen<span class="plat_rate"> <i class="pe-7s-star"></i><span> 4.7</span></span></h4>
+            <span class="likes">100k Likes</span> </div>
+        </div>
+      </div>
+      <div class="card fadeOut owl-carousel owl-theme">
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat5.png"></div>
+          <div class="item_desc">
+            <h4>ABC Kitchen<span class="plat_rate"> <i class="pe-7s-star"></i><span> 4.7</span></span></h4>
+            <span class="likes">100k Likes</span> </div>
+        </div>
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat6.png"></div>
+          <div class="item_desc">
+            <h4>OC<span class="plat_rate"> <i class="pe-7s-star"></i><span> 4.7</span></span></h4>
+            <span class="likes">300k Likes</span> </div>
+        </div>
+      </div>
+      <div class="card fadeOut owl-carousel owl-theme">
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat1.png"></div>
+          <div class="item_desc">
+            <h4>Asiat<span class="plat_rate"> <i class="pe-7s-star"></i><span> 4.7</span></span></h4>
+            <span class="likes">400k Likes</span> </div>
+        </div>
+        <div class="item">
+          <div class="plat_img">
+            <div class="img-filter"></div>
+            <img src="./assets/images/plat2.png"></div>
+          <div class="item_desc">
+            <h4>Asiat<span class="plat_rate"> <i class="pe-7s-star"></i><span> 4.7</span></span></h4>
+            <span class="likes">400k Likes</span> </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- map -->
+    
+    <div class="map">
+      <input id="pac-input" class="controls" type="text" placeholder="Search for an address">
+      <div id="map"></div>
+    </div>
+  </div>
+  <div class="" style="clear:both;width:100%;"></div>
+  
+  <!-- footer -->
+  <div class="footer">
+    <div class="logo"> IDEA <span>DATE</span> </div>
+  </div>
+  <!-- footer end --> 
+</div>
+<script>
+/// dropdowns 
+$(document).ready(function () {
+  
+              //
+              // Enable selectBox control and bind events
+              //
+  
+              $('#create').click(function () {
+                  $('SELECT').selectBox();
+              });
+  
+              $('#destroy').click(function () {
+                  $('SELECT').selectBox('destroy');
+              });
+  
+              $('#enable').click(function () {
+                  $('SELECT').selectBox('enable');
+              });
+  
+              $('#disable').click(function () {
+                  $('SELECT').selectBox('disable');
+              });
+  
+              $('#serialize').click(function () {
+                  $('#console').append('<br />-- Serialized data --<br />' +
+                          $('FORM').serialize().replace(/&/g, '<br />') + '<br /><br />');
+                  $('#console')[0].scrollTop = $('#console')[0].scrollHeight;
+              });
+  
+              $('#refresh').click(function() {
+                  $('SELECT OPTION').each(function() {
+                      $(this).text('Refreshed ' + $(this).val());
+                  });
+                  $('SELECT').selectBox('refresh');
+              });
+  
+              $('#value-1').click(function () {
+                  $('SELECT').selectBox('value', 1);
+              });
+  
+              $('#value-2').click(function () {
+                  $('SELECT').selectBox('value', 2);
+              });
+  
+              $('#value-2-4').click(function () {
+                  $('SELECT').selectBox('value', [2, 4]);
+              });
+  
+              $('#options').click(function () {
+                  $('SELECT').selectBox('options', {
+                      'Opt Group 1': {
+                          '1': 'Value 1',
+                          '2': 'Value 2',
+                          '3': 'Value 3',
+                          '4': 'Value 4',
+                          '5': 'Value 5'
+                      },
+                      'Opt Group 2': {
+                          '6': 'Value 6',
+                          '7': 'Value 7',
+                          '8': 'Value 8',
+                          '9': 'Value 9',
+                          '10': 'Value 10'
+                      },
+                      'Opt Group 3': {
+                          '11': 'Value 11',
+                          '12': 'Value 12',
+                          '13': 'Value 13',
+                          '14': 'Value 14',
+                          '15': 'Value 15'
+                      }
+                  });
+              });
+  
+              $('#default').click(function () {
+                  $('SELECT').selectBox('settings', {
+                      'menuTransition': 'default',
+                      'menuSpeed': 0
+                  });
+              });
+  
+              $('#fade').click(function () {
+                  $('SELECT').selectBox('settings', {
+                      'menuTransition': 'fade',
+                      'menuSpeed': 'fast'
+                  });
+              });
+  
+              $('#slide').click(function () {
+                  $('SELECT').selectBox('settings', {
+                      'menuTransition': 'slide',
+                      'menuSpeed': 'fast'
+                  });
+              });
+  
+              $('select')
+                      .selectBox({
+                          mobile: true
+                      })
+                      .focus(function () {
+                          $('#console').append('Focus on ' + $(this).attr('name') + '<br />');
+                          $('#console')[0].scrollTop = $('#console')[0].scrollHeight;
+                      })
+                      .blur(function () {
+                          $('#console').append('Blur on ' + $(this).attr('name') + '<br />');
+                          $('#console')[0].scrollTop = $('#console')[0].scrollHeight;
+                      })
+                      .change(function () {
+                          $('#console').append('Change on ' + $(this).attr('name') + ': ' + $(this).val() + '<br />');
+                          $('#console')[0].scrollTop = $('#console')[0].scrollHeight;
+                      });
+  
+          });
+</script> 
+<script src="./assets/owlcarousel/highlight.js"></script> 
+<script src="./assets/owlcarousel/app.js"></script> 
+<script src="./assets/js/js.js"></script> 
+<script src="./assets/js/selectBox.js"></script>
+</body>
+</html>

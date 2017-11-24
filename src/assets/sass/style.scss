@@ -1,0 +1,516 @@
+// varriable
+@import "responsive";
+$avenir:'Avenir LT Std';
+$CroissantOne:'CroissantOne-Regular';
+$ImageUrl:'../images/';
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-family: $avenir;
+}
+
+p {
+    font-size: 16px;
+}
+
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    color: #ffffff;
+}
+
+.col-left {
+    float: left;
+}
+
+.col-right {
+    float: right;
+}
+
+.dropdown-menu{
+
+    display: none;
+}
+
+
+@mixin box-sizing-fun($box) {
+    -webkit-box-sizing: $box;
+    -moz-box-sizing: $box;
+    box-sizing: $box;
+}
+@mixin border-radius-fun($tl, $tr, $br, $bl) {
+    border-radius: $tl $tr $br $bl;
+    -moz-border-radius: $tl $tr $br $bl;
+    -o-border-radius: $tl $tr $br $bl;
+    -wekit-border-radius:$tl $tr $br $bl;;
+}
+
+
+
+@mixin boxshadow($_x_offset,$_y_offset,$blur,$spead,$color) {
+    -moz-box-shadow: $_x_offset $_y_offset $blur $spead $color;
+    -webkit-box-shadow: $_x_offset $_y_offset $blur $spead $color;
+    -o-box-shadow: $_x_offset $_y_offset $blur $spead $color;
+    box-shadow: $_x_offset $_y_offset $blur $spead $color;
+}
+
+.normal {
+    width: 100%;
+    margin: 0;
+    @include box-sizing-fun( content-box);
+    position: relative;
+}
+
+@mixin bkpStyle($image, $bkSize, $bkpPps) {
+    background-image: url($ImageUrl+""+$image);
+    background-size: $bkSize;
+    background-position: $bkpPps;
+}
+
+.card {
+    margin-bottom: 20px;
+    @include box-sizing-fun( border-box);
+}
+
+.m_slider {
+    @include box-sizing-fun( border-box);
+    @extend .normal;
+    @include bkpStyle("slideShow.png", cover, center center);
+    .header {
+        @extend .normal;
+        height: 50px;
+        vertical-align: middle;
+        .logo {
+            font-family: CroissantOne-Regular;
+            font-size: 30px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            @include box-sizing-fun( border-box);
+            span {
+                color: #E23943;
+            }
+        }
+        .user {
+            position: relative;
+            li {
+                padding: 0 10px;
+                float: left;
+                line-height: 4
+            }
+
+            .img-profile{
+                width: 70px;
+                padding-left: 20px;
+                position: relative;
+
+                a{
+                    span{
+                  &::after{
+                    right: 0;
+                    z-index: 2;
+                    content: " ";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/ArrowDown.png) 50% center no-repeat;
+                    top: 16px;
+                    }  
+                }
+                    
+
+                        
+
+                    
+                }
+                
+                #user-submenu{
+                    background: #283142;
+                    position: absolute;
+                    min-width: 150px;
+                    max-width: 200px;
+                    right: 0;
+                    top: 58px;
+                    display: none;
+                    
+
+                    strong{
+                        color: #ffffff;
+                        
+                    }
+                    li{
+                        border-bottom: 1px solid #333d4e;
+
+                       line-height: 2;
+    clear: both;
+    padding: 3px 10px;
+    float: inherit;
+                    }
+                    
+                }
+            }
+        }
+    } // description 
+    .description {
+        .headings {
+            h1 {
+                font-family: $CroissantOne;
+                font-size: 50px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                padding-bottom: 20px;
+            }
+        }
+        h3 {
+            font-family: $avenir;
+            font-size: 20px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            padding-bottom: 10px;
+            font-weight: 500;
+        }
+        span {
+            font-family: $avenir;
+            font-size: 14px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+        }
+    }
+} // settings
+.settings {
+    button.followUs {
+        border: 0;
+        width: 107px;
+        background: #E23943;
+        border-radius: 100px;
+        font-family: "Avenir LT Std";
+        font-size: 18px;
+        color: #FFFFFF;
+        height: 40px;
+        cursor: pointer;
+    }
+    .followUs:focus {
+        outline: none;
+    }
+} // bottom-bar
+.bottom-bar {
+    left: 0;
+    padding-left: 20px;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+    @include box-sizing-fun( border-box);
+    position: absolute;
+    .filter {
+        margin-right: 60px;
+        width: 194px;
+    }
+    .main-menu {
+        height: 100%;
+        ul {
+            height: 100%;
+        }
+        ul li {
+            height: 100%;
+            float: left;
+            display: block;
+            margin: 0 35px;
+            cursor: pointer
+        }
+        ul li a {
+            font-family: $avenir;
+            font-size: 16px;
+            padding: 0 8px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        .active {
+            border-bottom: 3px solid #E23943;
+            a {
+                color: #E23943;
+            }
+        }
+    }
+}
+
+
+
+.sidenav {
+    @include boxshadow(1px, 1px, 6px, 0px, #111317);
+    
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(39, 48, 66, 1);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+}
+
+.sidenav {
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        text-transform: capitalize;
+        &.active {
+            color: #E23943 !important;
+        }
+    }
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+.main_content {
+     float: left;
+    height: auto;
+}
+
+.map {
+    position: relative;
+    @include box-sizing-fun( border-box);
+    #map {
+        width: 100%;
+        height: 100%;
+        max-height: 725px;
+    }
+
+   
+
+    #pac-input {
+        width: 80%;
+        position: absolute;
+        background-color: #fff;
+        z-index: 3;
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        height: 32px;
+        outline: none;
+        right: 0;
+        left: 0;
+        margin: 12px auto;
+        height: 50px;
+        padding-left: 20px;
+        @include box-sizing-fun( border-box);
+        @include border-radius-fun(25px, 25px, 25px, 25px) ;
+        @include boxshadow(0 ,2px ,6px,0, rgb(211, 211, 211)) ;
+        
+        &:focus {
+        border-color: #E23943;
+      }
+      
+      }
+
+      
+}
+
+.cards {
+    .card {
+        cursor: pointer;
+
+        
+
+        .item_desc {
+            height: 66px;
+            padding-top: 20px;
+            h4 {
+                font-family: $avenir;
+                font-size: 18px;
+                color: #000000;
+                .plat_rate {
+                    color: #FFCC3A;
+                    padding-left: 10px;
+                    i {
+                        font-size: 16px
+                    }
+                    span {
+                        color: #FFCC3A;
+                        font-size: 14px;
+                        font-weight: 300
+                    }
+                }
+            }
+            span {
+                font-family: $avenir;
+                font-size: 14px;
+                color: #252525;
+                letter-spacing: 0;
+            }
+        }
+        .owl-nav {
+            margin: 0 auto;
+            position: absolute;
+            margin-top: 0;
+            width: 100%;
+            top: 30%;
+            left: 0;
+            right: 0;
+            .owl-prev {
+                left: 10px;
+                position: absolute;
+            }
+            .owl-next {
+                right: 10px;
+                position: absolute;
+            }
+        }
+        .owl-nav [class*=owl-] {
+            background: transparent !important;
+        }
+        .item {
+            .plat_img {
+                position: relative;
+            .img-filter {
+                position: absolute;
+                z-index: 9;
+            }}
+            
+        }
+    }
+}
+
+.hover {
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 74, 74, 0.68);
+    background-image: url($ImageUrl+'HeartIcon.png');
+    background-repeat: no-repeat;
+    background-position: 94% 6%;
+}
+
+// footer
+.footer {
+    height: 150px;
+    margin: 20px auto 0 auto;
+    padding: 60px 143px;
+    background: #273042;
+    @include box-sizing-fun(border-box);
+    .logo {
+        font-family: $CroissantOne;
+        color: #ffffff;
+        font-size: 30px;
+        span {
+            color: #E23943
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.selectBox-dropdown {
+    
+    position: relative;
+    background: #283142;
+    line-height: 1.5;
+    padding-right: 10px;
+
+    @include box-sizing-fun(border-box);
+    
+    display: inline-block;
+    cursor: default;
+
+   &:focus{
+       outline: none;
+   }
+
+    .selectBox-arrow {
+        position: absolute;
+        top: 0;
+        right: -7;
+        width: 23px;
+        height: 100%;
+    
+        background: url($ImageUrl+'ArrowDown.png') 50% center no-repeat;
+        
+
+}
+
+}
+.selectBox-dropdown-menu {
+    padding-top: 15px;
+
+    position: absolute;
+    z-index: 99999;
+    max-width: 200px;
+    min-width: 150px;
+    max-height: 200px;
+    min-height: 1em;
+    border: 0;
+    background: #283142;
+    
+    -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    li{
+        padding: 3px 10px;
+        @include box-sizing-fun(border-box);
+    }
+}
+
+
+
+
+
+
+
+
